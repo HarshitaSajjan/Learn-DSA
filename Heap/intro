@@ -1,0 +1,31 @@
+Binary Heap
+used in heap sort
+used to implement priority queue
+priority queue is useful in many algorithms like
+djisktra, shortest path, prims, haufmann
+any situation where iteems in queue we use pq
+eg: dr queue, pateintes prioortiy, highest priority is visited first
+
+two types
+    Min heap: highest priority item is assigned lowest priority
+    Max heap: highest priority item is assigned highest priority
+
+left(i)= 2i+1
+right(i) = 2i+2
+parent(i)=floor((i-1)/2)
+
+complated binary tree
+last level partially filled from left to right 
+all level filled except possibly last level
+
+adv: binary heap as an array
+if cbt, no gaps in array and no space wastage
+contiguos location , random access
+cbt hegith is min poassible
+most operation depend onheight of bt
+linked dtaa stru then space is waste for storing ref  pointer
+
+
+    min heap: cbt
+                parent value<child value
+                every node has value smaller than its descendants
