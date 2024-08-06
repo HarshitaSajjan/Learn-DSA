@@ -1,0 +1,8 @@
+operations      array(unsorted)   array(sorted)      Linked List     BST(balanced)   Hash Table
+search             O(n)            O(logn)           O(n)             O(logn)          O(1)
+insert             O(1)            O(n)              O(1) O(n)if sorted O(logn)          O(1)
+delete             O(n)            O(n)              O(n)             O(logn)          O(n)
+find closest       O(n)            O(logn)           O(n)             O(logn)          O(n)
+Sorted Traversal   O(nlogn)        O(n)              O(nlogn)         O(n)             O(nlogn)
+                                            LL O(n) in case or sorted linked list
+
