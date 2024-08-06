@@ -1,0 +1,57 @@
+represent hierarchy
+eg. organzation in data structure
+folder structure4
+
+array stack linked list queue -> linear, traverse from one side to other side, cant be used to represent hierarchy
+these store in sequential structuree
+
+
+tree -> non linear data structure
+store in hierarchial structure
+
+node
+root
+leaf
+child
+parent
+subtree
+descendants
+ancestors
+degree
+internal nodes
+
+
+tree -> recursive in nature
+
+applications
+to represent hierarchial data
+eg organization structurefolder structure
+xml/html content(JSONa object)->nesting of object
+in OOP (Inheritance)
+
+Binary Search Trees
+Binary Heap->priority queues
+B and B+ Trees in DBMS
+Spanning and Shortest path trees in computer networks -> bridges-spanning trees, router ->shortest path tree
+Parse tree, expression tree in compiler
+
+
+Trie
+Suffix Trees -> time is proportional to length of pattern
+Binary Index Tree - fast
+Segment Tree - powerful
+
+tree-> used almost in every branch of computer science
+
+
+Binary Tree
+every node has at most two children ir degree of node is at most two
+0,1,2 children
+ three field in node
+ left child pointr|key/data /value|right child pointer
+
+
+ binary search tree 
+ binary tree
+ segement tree
+
