@@ -1,0 +1,35 @@
+/*are mainly useful for optimizaton prblm , ie maximing or minimizing something, like shortest path, longest path prblm, min max dist or wts */
+
+//if someone asks fro an amt , how will u give this amy using min coins
+
+//min coins, so we will give max value coins
+ int minCoins(int coins[], int n , int amt){
+    /*sort coins[] in decreasing order
+    int res=0;
+    for(int i=0; i<n; i++){
+    if(ccois[i]<=amt){
+    int c = floor(amt/coins[i]);
+    res=res+c;
+    amt= amt-c*coins[i]
+    }
+    if(amt==0) break;
+    }
+    return res;
+    */
+ }
+
+
+ /*General Structure of Greddy algprithms- these areused for optimization purpose
+ initiliase res=0;
+ while(all items are nit considered){
+ i=selectanItem()
+ if(feasible(i))
+ res=res+i
+ }
+ return res;
+ */
+
+/*greecdy algortithms may not work always but only at some cases like fractional knapsack, activity selection prrblm, job sequencing. prims krukals, dijsktra algorithm, huffmans coding(an optimal lossless compresion technique)
+
+finding clode to optimal solutions for np ahrd problms like travelling problm
+*/
