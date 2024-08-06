@@ -1,0 +1,78 @@
+/*useful for fixed sized array and following two types of operations
+    range query : O(logn) typically
+    update a value: o(logn) typically
+requires theta(n) time and theta(n) space*/
+
+//Method1(simple)
+int arr[]
+int getSUm(int qs, int qe){
+    int sum=0;
+    for(int i=qs; i<=qe; i++)
+        sum=sum+arr[i];
+    return sum;
+//theta(qs+qe+1)
+}
+void update(int i, int new_val){
+    arr[i]= new_val;
+//theta(1)
+}
+
+//method2 (prefix sum) segment tree 
+int n;
+int arr[n], pre_sum[n];
+int getsum(int qs, int qe){
+    if(qs==0)
+        return pre_sum[qe];
+    else
+        return (pre_sum[qe]-pre_sum[qs-1]);
+        //O(1)
+}
+int update(int i, int new_val){
+    int diff = new_val - arr[i];
+    for(int j=i; j<n; j++)
+        pre_sum[j] += diff;
+        //O(n)
+}
+void initialize(){
+    pre_sum[0]=arr[0];
+    for(int i=1; i<n; i++)
+        pre_sum[i] = pre_sum[i-1]+arr[i];
+        //O(n) time and spcae
+}
+
+
+/*motivation for using segment tree
+avg time O(n)
+
+build segment tree = each node sum of the subarray
+it is not a heap, dummy nodes to maintain relationship
+left(i)=2i+1
+right(i)=2i+2
+paremt(i) = floor(i-1/2)
+
+if n is known
+size of segment tree = (2*2^ceil(logbase2n))-1
+if input arr is power of 2 then no dummy nodes req else needed\
+
+if n id poer of two then 2n-1
+else 2x-1 where x is smallest power of 2 gretaer than n 
+
+approx 4n
+*/
+
+
+//Implementation
+//initial value int ss=0, se=n-1, si=0
+int tree[4n];
+constructST(0, n-1, 0);
+int constructST(int ss, int se, int si){
+    if (ss==se){
+        tree[si]=arr[ss];
+        return arr[ss];
+    }
+    int mid = (ss+se)/2;
+    tree[si]= construtST(ss, mid, 2*si+1) + constructST(mid+1, se, 2*si+2);
+
+    return tree[si];
+}
+
