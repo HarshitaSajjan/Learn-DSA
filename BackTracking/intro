@@ -1,0 +1,45 @@
+//given a string, print all those permutations which do not contain "AB" as a substring
+#include<bits/stdc++.h>
+using namespace std;
+
+//Naive Solution
+void permut(string str, int l, int r){
+    if(l==r){
+    if(str.find("AB")==str.npos)
+    print(str);
+    return;
+    }
+    else{
+        for(int i=l; i<=r; i++){
+            swap(str[i],str[l]);
+            permut(str,l+1, r);
+            swap(str[i], str[l]);
+        }
+    }
+}
+//!n*n work is done
+
+
+//BackTracking
+//by backtracking cut down  many recursive call which doesnt lead to required answer
+
+bool isSafe(string str, int l, int i, int r){
+    if(l!=0 && str[l-1] =='A' && str[i] =='B')
+    return false;
+    if(r=l+1 && str[i]='A' && str[l]='B')
+    return false;
+    return true;
+}
+void permutbyBT(string str, int l, int r){
+    if(l==r){
+        if(str.find("AB")==str.npos)
+        print(str);
+        return;
+    }
+    else{
+        if(isSafe(str, l, i, r))
+        swap(str[i],str[l]);
+        permutbyBT(str,l+11,r);
+        swap(str[i],str[l]);
+    }
+}
