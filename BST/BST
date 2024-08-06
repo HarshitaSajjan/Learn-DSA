@@ -1,0 +1,23 @@
+for every node, keys in left side are smaleer ans keys in right side are greater
+all keys are typically considered as distinct
+like linked list, it is a linkes data structure
+
+            50
+        30           70
+    10      40  60      80
+
+Implemented in c++ as map, set, multimap, and multiset and in java as Treeset and Treemap
+
+bst is not cache friendly - item are at diff location
+linkedked structure u donot need resizing
+
+
+example operations
+bst are repsented same as bt
+1. create an empty bst
+2. insert 20,15,30,40,50,12,18,35,80,7
+
+bst have specific insert operations
+order has to be maintained while deletion
+
+TC O(logn)
