@@ -1,0 +1,15 @@
+Optimization over plain recursion
+givena problem of input n , we use the solution of subproblems, ie input size is n then sub-prblm then n-1, n-2, n-3 so on or n/a or n/b;
+plain recursion, solving some sub prblme again and again then we can optimie by storing the solution and use it later, ie optimized
+idea of dp is to reuse the solution of sub-problems, when there r overlapping subproblems,
+two ways to implement dp    
+memoization or top-down
+tabulation or bottom-up
+
+
+applications of dp
+bellmanford algorithm
+floyd warshall algorithm
+diff utility(lcs)
+search closed words(edit distance)
+resource allocation (0-1 knapsack)
