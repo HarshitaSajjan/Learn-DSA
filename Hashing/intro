@@ -1,0 +1,96 @@
+used to implement dictionary where u have key-value pairs, it isi also used to implement set where u only have set of keys
+hashing provides search insert delete in O(1) time on avg
+these three operation hashing is best
+
+array
+search unordered O(n) sorted(logn)
+insert O(n) sorted O(n)
+delete O(n) sorted O(n)
+
+
+
+AVL TREE RB TREE O(logn) for 3 opn
+
+
+find a key just smaller orlarger than given using avl or rb TREE in O(logn) time
+but in hashing it is strict search  whether the key is present or not present that opn is O(1)
+find all the vaue in sortted range in also costly
+hashing can be considered expert  in the above 3 opn
+
+not useful for
+finding closest value - AVL TREE RB TREE
+sorted data - AVL TREE RB TREE
+prefix searching - hasing does exact key search so trie is used here
+
+
+Applications - 
+used to solve algorithm problem
+Dictionaries
+Database INDEXING
+Cryptography
+Caches
+Symbol Tables in Compilers/Interpreters
+Routers
+Caches
+Getting data from databases
+many more
+
+
+
+Direct Address table
+imagine a situatuion where you have 1000 keys with values from 0 to 999 how would you implement  following in  O(1) Time
+search 
+insert
+delete
+
+Direct Address Tables- when keys are small which can be created in memory inO(1)0 opn, and able ot manage small values
+delete(i){
+    table[i]=0;
+}
+search(i){
+    return table[i];
+}
+insert(i){
+    table[i]=1;
+}
+
+problem with the above ds is it cant handle* large keys like phone no. and another prblm like floating no
+keys can be strign or addresses
+ 
+
+
+HASHING
+example: Phone numbers
+        names
+        employee id(like E1021)
+hash function convert large keys to small values
+
+working-
+every time for samekey smae small values shoudl be generated
+        should be fast O(1) for integrrs and O(len) for strings of length len
+should uniformly distribute large keys int hash table slots 
+should generate values from 0 to m-1
+
+example hash functions
+h(large_key) = large_key%m, m is vhosen a prime number close to hssh table size, bad value is power of 2 or 10
+for strigns, weights sum 
+str[] = "abcd"
+(str[0]*x0 + str[1]*x1 + str[2]*x2+str[3]*x3)%m
+
+UniveraL AHshing
+
+more one large key have same small value - collisions
+
+
+Collision Handling
+if we knowkeys in advance, then we can perfect hashing - no collisons
+
+if we dont know keys, then we use one of the following
+    chaining
+    open adressing
+        linear probling
+        qudaratic probing
+        double hashing
+
+    
+birthday paradox- 23 ppl  in room , then 2 ppl among 23 have same bday, 23-50% , 70- 99.9% 
