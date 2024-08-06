@@ -1,0 +1,26 @@
+simple soltuion
+use adjacency list or adjancencey matrix representation
+
+adj list: make friends() ad arefriends() are O(n)
+adj matrix: makefriende in theta(n) and arefriends is theta(1)
+
+
+Better Solution(DisJoint Set)
+used in any prblm where universe set and many subset and no two set have anything in common
+
+find(x): Returns a representative of x set (or social network)
+union(x): combines sets of x and y(same as maekfriends())
+
+boolean are friends(x,y){
+    return (find(x)==find(y));
+}
+
+maekfriends(x,y){
+    union(x,y);
+} 
+
+TC depend on implementation
+simple O(n)
+union by rank O(logn)
+union by rank and path compression (i) amortized time(mean of time is constant)
+
