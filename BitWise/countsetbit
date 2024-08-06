@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//naive solution
+/*remove last bit and increase the count*/
+int countset(int n){
+    int ans=0;
+    while(n>0){
+        if(n%2!=0)  // if((n&1)==1), res = res+(n&1);
+        ans++;
+        n=n/2;  // n>>1;
+    }
+}
+/*theta(total nits in n )*/
+
+//Brian Kerningam's algorithm  theta(set bit count)
+/*
+]n=40
+binary representation
+intiial               000...0101000  
+after 1st iteration   000...0100000
+after 2nd iteration   000...0000000
+*/
+int countbits(int n){
+    int ans=0;
+    while(n>0){
+        n= (n&(n-1));
+        ans++;
+    }
+    return ans;
+}
+
+
+//Lookup Table Method for 32 bit numbers theta(1) solution
+/*
+preprocessing required, 32 bit is divied into chunks of 8bits
+0 to 2^7-1
+*/
+int table[256];
+void initialize(){
+   table[0]=0;
+   for(int i=0; i<256; i++)
+    table[i]= (i&1)+table[i/2]; 
+}
+int count(int n){
+    int ans=table[n&Oxff]; //ff is hexadecimal of 8set bits
+    n=n>>8;
+    res = res+table[n&Oxff];//every 8set bits will give it count if want to extend for 64 bits then do it 4 more times
+    n>>8;
+    res = res+table[n&Oxff];
+    n>>8;
+    res = res+table[n&Oxff];
+    return res;
+
+
+}
