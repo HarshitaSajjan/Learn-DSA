@@ -1,0 +1,105 @@
+string is sequence of character
+
+char array vs string
+
+small set 
+contigous integer values for 'a' to 'z' and 'A' to 'Z' in both ascii and UTF-16
+
+c/c++ ascii 8bit also supports wchar_t
+java utf-16 16 bit also supports byte
+
+
+example problem: print frequenciees of character (in sorted order) in a string of alphabets
+
+string str="geeksforgeeks";
+int count[26]={0};
+for(int i=0;i<str.length(): i++)
+    count[str[i]-'a']++;
+for(int i=0; i<26; i++)
+    if(count[i]>0)
+    cout<<(char)(i+'a')<<" "<<count[i]<<endl;
+//O(n) time
+
+/*
+string can be represneted
+1. c-style strings
+ int main(){
+ char str[]="gfg"
+ char str[]={'g', 'f', 'g'} => keep on printing until finds \0 to use it as a string
+ cout<<str;
+ return 0;
+ }
+ terminated \0
+
+ funtions
+ strlen(str)
+ strcmp(s1, s2) = chercks kexicographically
+ strcpy(s1, s2)
+
+int main(){
+char s1[]= "gfg";
+char s2[] = "bcd";
+int ares = strcmp(s1, s2);
+if(res>0) 
+    cout<<"gretaer";
+else if(res==0)
+    cout<<"same";
+else
+    cout<<"smaller"
+
+}
+
+
+int main(){
+char str[5];
+str="gfg"  ==> will give error need to use strcpy or initlizae while declaring
+strcpy(str, "gfg")
+cout<<str;
+return 0;
+}
+*/
+
+
+/*
+2. C++ string
+richer library
+supporta operator like + < >
+can assing a string later
+donot have to worry about size
+can be converted to c-style if needed
+
+
+int main(){
+string str ="geeksforgeeks";
+cout<<str.length();
+str=str+"xyz";
+cout<<str<<" ";
+cout<<str.substr(1,3)<<" ";
+cout<<str.find("eek")<<" "; string::npos
+
+string s1="abc";
+string s2="bcd";
+if(s1==s2)
+    cout<<"same";
+else if(s1<s2)
+cout<<"smaller";
+else
+cout<<"greater";
+
+
+string ss;
+cin>>ss;
+
+getline(cin, ss);
+getline(cin, ss, 'a');
+
+for(int i=0; i<str.length(); i++)
+    cout<<str[i];
+    cout<<endl;
+
+for(char x: s)
+    cout<<x;
+
+return 0;
+}
+*/
