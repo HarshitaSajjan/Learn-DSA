@@ -1,0 +1,19 @@
+Trie Data Structure
+well suited for implementing dictionnary
+efficient for the following operations on words in a dictionary
+
+opeartions like
+search
+insert
+delete
+prefix search
+lexicographical ordering of words
+
+Comparison with hashing
+
+operations              Trie       hashing
+search                  theta(word len)in worst case        theta(word len)in avg case
+insert                  ""              ""
+delete                  ""              ""
+prefix search           theta(wordlen + outputlen)   not supported 
+lexicographic ordering  theta(outputlen)             not supported 
