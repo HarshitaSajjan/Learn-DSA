@@ -1,0 +1,30 @@
+Adjancency MAtrix(stores both info as to which in connected and which is not connected)
+
+space required theta(VxV)
+operations
+check if u ansv are adjacent: theta(1)
+find all vertices adjacent to u theta(v)
+find degree of u theta(v)
+add/remove an edge theta(1)
+add/remove a vertex theta(v2)
+
+
+
+Adjacency List(only stores which are connected)
+saves the space
+an array of lists where lists are more popularly represented as
+dynamic sized arrays cache friendlyiness and ease of implementation, disadv preallocate some extra space and theta(1) or theta(n)
+linked list
+
+space required 
+undirected theta(v+2*e)
+directed theta(v+e)
+operations
+check if there is an edge from u to v O(v)
+find all adjacent of u theta(degreee(u))
+find degree of u theta(1)
+add an edge theta(v) (dsa or linked O(1) in dsa can be (O(v)) but avg is O(1))
+remove an edge O(v)\
+
+
+number of graphs which can be made , if n vertices are given are pow(2, nc2), for undirected graphs
