@@ -1,0 +1,17 @@
+FIFO - first in first out
+front
+rear
+enqueue(x)
+dequeue()
+getFront()
+getRear()
+size()
+isEmpty()
+
+
+Applications
+    single resource and mulitple consumers
+    synchronisation between slow and fast devices
+    in os(semaphores, fcfs, scheduling, spooling, buffers for devices like keywords)
+    in cn (routers, switches and mail queues)
+    varaitions deque, priority queue and doubky ended prioirity queue
