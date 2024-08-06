@@ -1,0 +1,25 @@
+problems with array data tssructure
+array is sequential but in LL not sorted, LL is also sequetial , these two are comp of each other
+stack, queue, deque can be implemented by both arr and LL
+int arr[100];
+int arr[n];
+int *arr=new int[n];
+vector<int>v;
+
+array is pre allocation of spacee
+either size is fixed and preallocated (in both fixed and variable sizzed arrays), or the worst case insertion at the end in theta(n)
+insertion in the middle(or beginng )is costly
+deletion from the middle (or beginning) is costly
+implementation of data structure like queue and deque is complex with arrays
+
+
+how to implement round robin scheduling
+gevin a sequence of items whenever we see an item x in the sequence, we need to replace it with instances of another item y
+we have  multiple sorted sequences and we need merge them frequently
+system progamming and we have limited mem env, if mem is fragmented then array wont work as we wont get contigous array
+
+
+LL is linear data structure, it stored in sequential manner, but element need not be in contigous location
+
+the idea is to drop the contigous memory requirements os that the insertions, deletions can efficiwntly hapen at the middle also and no need to pre allocate the space(no extra space)
+adv insert and delete at middle and beginning
