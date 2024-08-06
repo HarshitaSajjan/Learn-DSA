@@ -1,0 +1,17 @@
+/*
+approach to desgin algorithm
+divis the pblm to subprblm
+then combibe ths olsution subprblm and find the final solution
+
+divide
+apply
+conquer
+
+
+applications
+binary search
+find max and min
+quick sort
+merger sort
+strassers matrix multiplication
+*/
